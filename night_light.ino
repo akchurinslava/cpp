@@ -4,10 +4,9 @@ const int sens = 0;
 const int led1 = 13;
 const int led2 = 12;
 const int led3 = 11;
-const int led4 = 10;
 
 //define an array with our leds
-int arr[] = {led1, led2, led3, led4};
+int arr[] = {led1, led2, led3};
 
 //define number of leds
 int num_arr = sizeof(arr) / sizeof(arr[0]);
