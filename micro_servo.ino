@@ -31,10 +31,11 @@ void loop(){
   celsius = (volt - 0.5) * 100.0;
   Serial.print(" Degrees in celsium: ");
   Serial.print(celsius);
-  if (celsius <= 22){
+  if (celsius <= 28){
     serv.write(0);
     digitalWrite(led, LOW);
-  }else if (celsius <= 35){
+  
+  }else if (celsius >= 29){
     serv.write(180);  
     digitalWrite(led, HIGH);
   } 
