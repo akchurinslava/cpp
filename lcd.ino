@@ -35,20 +35,20 @@ void loop(){
 
   lcd.setCursor(0, 1);
 
-  if (tempc < 15){
+  if (tempc < 25){
     digitalWrite(ledPins[0], HIGH);
     digitalWrite(ledPins[1], LOW);
     digitalWrite(ledPins[2], LOW);
     lcd.print("VERY COLD!");
-  }else if (tempc >= 15 && tempc < 30){
+  }else if (tempc >= 25 && tempc < 26){
     digitalWrite(ledPins[0], LOW);
     digitalWrite(ledPins[1], HIGH);
     digitalWrite(ledPins[2], LOW);
     lcd.print("NORMAL!");
-  }else if (tempc >= 30){
-    digitalWrite(ledPins[0], HIGH);
+  }else if (tempc >= 26){
+    digitalWrite(ledPins[0], LOW);
     digitalWrite(ledPins[1], LOW);
-    digitalWrite(ledPins[2], LOW);
+    digitalWrite(ledPins[2], HIGH);
     lcd.print("VERY HOT!");
   }
   delay(1000);
